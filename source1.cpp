@@ -19,6 +19,12 @@ public:
     // Simplify fraction
     void simplify()
     {
+        if (numerator > 0 && denominator < 0)
+        {
+            numerator *= -1;
+            denominator *= -1;
+        }
+        
         int _gcd = std::gcd(numerator, denominator);
         numerator /= _gcd;
         denominator /= _gcd;
