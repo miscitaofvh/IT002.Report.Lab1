@@ -55,9 +55,9 @@ public:
         cout << "The fraction after being simplified is: ";
         
         if (denominator == 1)
-            cout << numerator;
+            cout << numerator << endl;
         else
-            cout << numerator << "/" << denominator;
+            cout << numerator << "/" << denominator << endl;
     }
 };
 
