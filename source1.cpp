@@ -19,7 +19,7 @@ public:
     // Simplify fraction
     void simplify()
     {
-        if (numerator > 0 && denominator < 0)
+        if (denominator < 0)
         {
             numerator *= -1;
             denominator *= -1;
