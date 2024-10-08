@@ -8,10 +8,13 @@ int main()
     cout << "Enter x: ";   
     cin >> x;
 
+    // prepare
     long double i = 0;
     long double sign = 1;
     long double ans = 0;
     long double current = x;
+
+    //Calculator Sin(x)
     do
     {
         ans += sign * current;  
