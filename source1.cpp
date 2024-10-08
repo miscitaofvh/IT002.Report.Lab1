@@ -1,70 +1,37 @@
-//sun's code
 #include <bits/stdc++.h>
 
 using namespace std;
 
-class Fraction{
-private:
-    int numerator, denominator;
-public:
-    Fraction(int _numerator = 0, int _denominator = 1)
+int a, b;
+
+int main()
+{
+    cout << "Enter numerator of the fraction: ";
+    cin >> a;
+    cout << "Enter denominator of the fraction: ";
+    cin >> b;
+
+    while (b == 0)
     {
-        // Fractions cannot have a denominator of 0
-        if (_denominator == 0) return;
-        numerator = _numerator;
-        denominator = _denominator;
-        simplify();
+        cout << "Fractions cannot have a denominator of 0" << endl;
+        cout << "Enter again: ";
+        cin >> b;
     }
 
     // Simplify fraction
-    void simplify()
+    int _gcd = gcd(a, b);
+    a /= _gcd;
+    b /= _gcd;
+
+    cout << "The fraction after being simplified is: ";
+
+    if (b == 1)
     {
-        if (denominator < 0)
-        {
-            numerator *= -1;
-            denominator *= -1;
-        }
-        
-        int _gcd = std::gcd(numerator, denominator);
-        numerator /= _gcd;
-        denominator /= _gcd;
+        cout << a;
     }
-
-    // read fraction and simplify it
-    // if denominator equal 0, require enter it again
-    void read()
+    else
     {
-        cout << "Enter numerator of the fraction: ";
-        cin >> numerator;
-        cout << "Enter denominator of the fraction: ";
-        cin >> denominator;
-
-        while (denominator == 0)
-        {
-            cout << "Fractions cannot have a denominator of 0" << endl;
-            cout << "Enter again: ";
-            cin >> denominator;
-        }
-        
-        simplify();
+        cout << a << "/" << b;
     }
-
-    // write fraction
-    void write()
-    {
-        cout << "The fraction after being simplified is: ";
-        
-        if (denominator == 1)
-            cout << numerator << endl;
-        else
-            cout << numerator << "/" << denominator << endl;
-    }
-};
-
-int main()
-{   
-    Fraction a;
-    a.read();
-    a.write();
     return 0;
 }
