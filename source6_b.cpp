@@ -14,7 +14,7 @@ struct Student
         mathScore = _mathScore;
         literatureScore = _literatureScore;
         englishScore = _englishScore;
-        averageScore = (mathScore + literatureScore + englishScore) / 3;
+        averageScore = (2 * mathScore + literatureScore + englishScore) / 4;
 
         if (averageScore < 5) classify = "Yeu";
         if (averageScore >= 5 && averageScore < 6.5) classify = "Trung Binh";
