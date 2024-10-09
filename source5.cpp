@@ -80,13 +80,13 @@ int main()
     cin >> year;
 
     int prevDay = day, prevMonth = month, prevYear = year;
-    int nextDayValue = day, nextMonth = month, nextYear = year;
+    int _nextDay = day, nextMonth = month, nextYear = year;
 
     previousDay(prevDay, prevMonth, prevYear);
-    nextDay(nextDayValue, nextMonth, nextYear);
+    nextDay(_nextDay, nextMonth, nextYear);
 
     cout << "The day before " << day << '/' << month << '/' << year << " is: " << prevDay << '/' << prevMonth << '/' << prevYear << endl;
-    cout << "The day before " << day << '/' << month << '/' << year << " is: " << nextDay << '/' << nextMonth << '/' << nextYear << endl;
+    cout << "The day before " << day << '/' << month << '/' << year << " is: " << _nextDay << '/' << nextMonth << '/' << nextYear << endl;
     cout << "The day " << day << '/' << month << '/' << year << " is day " << dayOfYear(day, month, year) << " of the year" << endl;
 
     return 0;
