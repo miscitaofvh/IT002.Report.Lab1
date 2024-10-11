@@ -50,6 +50,7 @@ string checkName(string name)
     return "ok";
 }
 
+//check Score >= 0 && <= 10
 string checkScore(double score)
 {
     if (score < 0)
@@ -60,6 +61,7 @@ string checkScore(double score)
     return "ok";
 }
 
+// Find all students with highest average score
 void findMaxAverageScore(vector<Student> students)
 {
     double maxAverageScore = 0;
@@ -75,6 +77,7 @@ void findMaxAverageScore(vector<Student> students)
     cout << endl;
 };
 
+// Find student by name
 void findStudentByName(vector<Student> students, string name)
 {
     string _name = name;
@@ -111,6 +114,8 @@ void findStudentByName(vector<Student> students, string name)
     cout << endl;
 };
 
+
+// Find all students with lowest math score
 void findMinMathScore(vector<Student> students)
 {
     double minMathScore = 10;
